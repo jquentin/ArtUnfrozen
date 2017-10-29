@@ -5,6 +5,17 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour {
 
+	Rigidbody2D _rigidbody;
+	Rigidbody2D rigidbody
+	{
+		get
+		{
+			if (_rigidbody == null)
+				_rigidbody = GetComponent<Rigidbody2D>();
+			return _rigidbody;
+		}
+	}
+
 	public float size
 	{
 		get
@@ -28,6 +39,11 @@ public class Planet : MonoBehaviour {
 			}
 			GetComponent<SpriteRenderer>().sortingOrder = index;
 		}
+	}
+
+	void Update()
+	{
+//		rigidbody.AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)), ForceMode2D.Force);
 	}
 
 }
