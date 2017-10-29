@@ -6,7 +6,7 @@ using UnityEngine;
 public class Planet : MonoBehaviour {
 
 	Rigidbody2D _rigidbody;
-	Rigidbody2D rigidbody
+	new Rigidbody2D rigidbody
 	{
 		get
 		{
@@ -41,9 +41,10 @@ public class Planet : MonoBehaviour {
 		}
 	}
 
-	void Update()
+	public void ApplyWind(Vector2 speed)
 	{
-//		rigidbody.AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)), ForceMode2D.Force);
+		if (speed.magnitude > 0.1f)
+			rigidbody.velocity = Vector2.Lerp(rigidbody.velocity, speed, Time.deltaTime * 3f / rigidbody.mass);
 	}
 
 }

@@ -1,12 +1,14 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:1,cusa:True,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:True,tesm:0,olmd:1,culm:2,bsrc:3,bdst:7,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:False,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:True,atwp:True,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:1873,x:33625,y:32713,varname:node_1873,prsc:2|emission-5747-OUT,alpha-4805-A;n:type:ShaderForge.SFN_Tex2d,id:4805,x:32551,y:32729,ptovrint:False,ptlb:MainTex,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:True,tagnsco:False,tagnrm:False,ntxv:1,isnm:False;n:type:ShaderForge.SFN_Lerp,id:5747,x:33344,y:32681,varname:node_5747,prsc:2|A-4805-RGB,B-3963-OUT,T-5014-OUT;n:type:ShaderForge.SFN_Blend,id:3963,x:33000,y:32948,varname:node_3963,prsc:2,blmd:17,clmp:True|SRC-4805-RGB,DST-1972-RGB;n:type:ShaderForge.SFN_SceneColor,id:1972,x:32539,y:33053,varname:node_1972,prsc:2;n:type:ShaderForge.SFN_ValueProperty,id:5175,x:32910,y:32677,ptovrint:False,ptlb:DifferenceBlendRatio,ptin:_DifferenceBlendRatio,varname:node_5175,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_If,id:380,x:33162,y:32520,varname:node_380,prsc:2|A-8804-OUT,B-4439-VOUT,GT-5175-OUT,EQ-5014-OUT,LT-5014-OUT;n:type:ShaderForge.SFN_RgbToHsv,id:4439,x:32778,y:32577,varname:node_4439,prsc:2|IN-1972-RGB;n:type:ShaderForge.SFN_Vector1,id:8804,x:32848,y:32488,varname:node_8804,prsc:2,v1:0.6;n:type:ShaderForge.SFN_Vector1,id:5014,x:32880,y:32769,varname:node_5014,prsc:2,v1:1;n:type:ShaderForge.SFN_SceneDepth,id:3910,x:33105,y:32735,varname:node_3910,prsc:2;n:type:ShaderForge.SFN_Depth,id:6475,x:33166,y:32881,varname:node_6475,prsc:2;proporder:4805-5175;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:1,cusa:True,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:True,tesm:0,olmd:1,culm:2,bsrc:3,bdst:7,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:False,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:True,atwp:True,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:1873,x:34087,y:32705,varname:node_1873,prsc:2|emission-5695-OUT,alpha-4805-A;n:type:ShaderForge.SFN_Tex2d,id:4805,x:32539,y:32846,ptovrint:False,ptlb:MainTex,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:True,tagnsco:False,tagnrm:False,ntxv:1,isnm:False;n:type:ShaderForge.SFN_Blend,id:3963,x:33000,y:32948,varname:node_3963,prsc:2,blmd:17,clmp:True|SRC-4805-RGB,DST-1972-RGB;n:type:ShaderForge.SFN_SceneColor,id:1972,x:32539,y:33053,varname:node_1972,prsc:2;n:type:ShaderForge.SFN_Slider,id:8872,x:32921,y:32780,ptovrint:False,ptlb:DifferenceBlendRatio,ptin:_DifferenceBlendRatio,varname:node_8872,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Add,id:3758,x:33000,y:33133,varname:node_3758,prsc:2|A-4805-RGB,B-1972-RGB;n:type:ShaderForge.SFN_Slider,id:5951,x:32883,y:32552,ptovrint:False,ptlb:BaseRatio,ptin:_BaseRatio,cmnt:The ratio of the base texture that would be shown with a Default Sprite Shader,varname:node_5951,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Add,id:6405,x:33472,y:32661,varname:node_6405,prsc:2|A-2160-OUT,B-6877-OUT,C-9042-OUT;n:type:ShaderForge.SFN_Divide,id:5695,x:33766,y:32776,varname:node_5695,prsc:2|A-6405-OUT,B-2028-OUT;n:type:ShaderForge.SFN_Slider,id:2174,x:32854,y:33326,ptovrint:False,ptlb:AdditiveRatio,ptin:_AdditiveRatio,varname:node_2174,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Add,id:2028,x:33521,y:33169,varname:node_2028,prsc:2|A-5951-OUT,B-8872-OUT,C-2174-OUT;n:type:ShaderForge.SFN_Multiply,id:2160,x:33265,y:32533,varname:node_2160,prsc:2|A-4805-RGB,B-5951-OUT;n:type:ShaderForge.SFN_Multiply,id:6877,x:33239,y:32697,varname:node_6877,prsc:2|A-3963-OUT,B-8872-OUT;n:type:ShaderForge.SFN_Multiply,id:9042,x:33262,y:33116,varname:node_9042,prsc:2|A-3758-OUT,B-2174-OUT;proporder:4805-8872-5951-2174;pass:END;sub:END;*/
 
 Shader "Shader Forge/Planet" {
     Properties {
         [PerRendererData]_MainTex ("MainTex", 2D) = "gray" {}
-        _DifferenceBlendRatio ("DifferenceBlendRatio", Float ) = 0
+        _DifferenceBlendRatio ("DifferenceBlendRatio", Range(0, 1)) = 0
+        _BaseRatio ("BaseRatio", Range(0, 1)) = 0
+        _AdditiveRatio ("AdditiveRatio", Range(0, 1)) = 0
         [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
         [MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
         _Stencil ("Stencil ID", Float) = 0
@@ -57,6 +59,9 @@ Shader "Shader Forge/Planet" {
             #pragma target 3.0
             uniform sampler2D _GrabTexture;
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
+            uniform float _DifferenceBlendRatio;
+            uniform float _BaseRatio;
+            uniform float _AdditiveRatio;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -96,8 +101,9 @@ Shader "Shader Forge/Planet" {
 ////// Emissive:
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
                 float4 node_1972 = sceneColor;
-                float node_5014 = 1.0;
-                float3 emissive = lerp(_MainTex_var.rgb,saturate(abs(_MainTex_var.rgb-node_1972.rgb)),node_5014);
+                float3 node_3963 = saturate(abs(_MainTex_var.rgb-node_1972.rgb));
+                float3 node_3758 = (_MainTex_var.rgb+node_1972.rgb);
+                float3 emissive = (((_MainTex_var.rgb*_BaseRatio)+(node_3963*_DifferenceBlendRatio)+(node_3758*_AdditiveRatio))/(_BaseRatio+_DifferenceBlendRatio+_AdditiveRatio));
                 float3 finalColor = emissive;
                 return fixed4(finalColor,_MainTex_var.a);
             }

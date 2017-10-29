@@ -6,48 +6,34 @@ public class WindEffect : MonoBehaviour {
 
 	public float windForce = 1f;
 
-	Vector2 offset;
-
-	Vector2 lastPos;
-
-	Rigidbody2D _rb;
-	Rigidbody2D rb
-	{
-		get
-		{
-			if (_rb == null)
-				_rb = GetComponent<Rigidbody2D>();
-			return _rb;
-		}
-	}
-
-	void OnMouseEnter()
-	{
-		offset = lastPos = Input.mousePosition;
-	}
-
-	void OnMouseOver()
-	{
-		Vector2 move = (Vector2)Input.mousePosition - lastPos;
-		Vector2 speed = move / Time.deltaTime;
-
-//		Vector2 speed2 = speed.normalized * ((speed.magnitude + 1) * (speed.magnitude + 1) - 1f);
-//		rb.AddForce(speed2 * Time.deltaTime * windForce, ForceMode2D.Force);
-
-		Vector2 targetVelocity = speed * windForce;
-		if (targetVelocity.magnitude > rb.velocity.magnitude)
-			rb.velocity = targetVelocity;
-
-		lastPos = Input.mousePosition;
-	}
-
-	void OnMouseEnd()
-	{
-
-	}
+	Vector2 lastPos = new Vector2(float.NaN, float.NaN);
 
 	void Update()
 	{
+
+		Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+		if (!float.IsNaN(lastPos.x))
+		{
+			Vector2 move = currentPos - lastPos;
+			Vector2 speed = move / Time.deltaTime;
+
+			Collider2D[] col = Physics2D.OverlapPointAll(currentPos);
+
+			if(col.Length > 0){
+				foreach(Collider2D c in col)
+				{
+					Planet planet = c.GetComponent<Planet>();
+					if (planet != null)
+					{
+						planet.ApplyWind(speed * windForce);
+					}
+				}
+			}
+		}
+
+		lastPos = currentPos;
+
 	}
 
 }
