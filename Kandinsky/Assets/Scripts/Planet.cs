@@ -44,7 +44,18 @@ public class Planet : MonoBehaviour {
 	public void ApplyWind(Vector2 speed)
 	{
 		if (speed.magnitude > 0.1f)
-			rigidbody.velocity = Vector2.Lerp(rigidbody.velocity, speed, Time.deltaTime * 3f / rigidbody.mass);
+			rigidbody.velocity = Vector2.Lerp(rigidbody.velocity, speed, Time.deltaTime * 3f / Mathf.Sqrt(rigidbody.mass));
+	}
+
+	void Start ()
+	{
+		AdjustPitch ();
+	}
+
+	void AdjustPitch ()
+	{
+		if (GetComponent <AudioSource> () != null && GetComponent <CircleCollider2D> () != null)
+			GetComponent <AudioSource> ().pitch = 1f / GetComponent <CircleCollider2D>().radius;
 	}
 
 }
