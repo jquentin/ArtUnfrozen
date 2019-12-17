@@ -47,6 +47,7 @@ public class BallGroup : MonoBehaviour
 	void Turn(bool left)
 	{
 		i = i + (left ? 1 : -1);
-		transform.DORotate(i * Vector3.fwd * 45f, 0.5f);
+		transform.DORotate(i * Vector3.fwd * 45f, 2f).SetEase(Ease.InOutQuad);
 	}
+
 }
