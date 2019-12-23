@@ -14,7 +14,7 @@ public class Follow : MonoBehaviour
 		offset = transform.position - target.position;
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		transform.position = target.position + offset;
 	}
