@@ -18,6 +18,8 @@ public class BallLine : MonoBehaviour
 	//	Init();
 	//}
 
+#if UNITY_EDITOR
+
 	[ContextMenu("Init")]
 	void Init()
 	{
@@ -37,5 +39,7 @@ public class BallLine : MonoBehaviour
 		//	ball.Init(ballColor, trailColor);
 		//}
 	}
+
+#endif
 
 }
